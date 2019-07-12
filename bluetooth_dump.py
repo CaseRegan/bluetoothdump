@@ -67,12 +67,12 @@ while 1:
 
             activity_log.write('completed %s %s at %s\n' % \
                 (name, mac, datetime.datetime.now()))
-
-            print(help_message)
         except pexpect.TIMEOUT:
             print('timeout occured with %s %s at %s' % \
                 (name, mac, datetime.datetime.now()))
             activity_log.write('timeout with %s %s at %s\n' % \
                 (name, mac, datetime.datetime.now()))
+        
+        print(help_message)
 
 activity_log.close()
